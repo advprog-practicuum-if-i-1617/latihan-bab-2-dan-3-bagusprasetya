@@ -1,7 +1,9 @@
 package KonversiAngka;
 
 public class konversi {
- 
+    public static void konversi(){
+    
+}
     public static void konversi(int angka, String val) {
         String satuan[] = {
             " ",
