@@ -4,12 +4,10 @@ import java.util.Scanner;
 public class MainAngka {
 
     public static void main(String[] args) {
-       
-           konversi convert = new konversi();
-        // isi parameter integer
-        int satuan = 699;
-        // isi parameter String
-        String huruf = "Enam Ratus Tujuh Puluh Tujuh";
+        Scanner in = new Scanner(System.in);
+        konversi convert = new konversi();
+        int satuan = in.nextInt();
+        String huruf = "Sembilan ratus sembilan puluh sembilan";
         convert.konverter(satuan);
         System.out.println("");
         convert.konverter(huruf);
