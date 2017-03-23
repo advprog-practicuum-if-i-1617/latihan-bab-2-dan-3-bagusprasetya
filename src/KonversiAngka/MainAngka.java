@@ -7,7 +7,7 @@ public class MainAngka {
         Scanner in = new Scanner(System.in);
         konversi convert = new konversi();
         int satuan = in.nextInt();
-        String huruf = "Sembilan ratus sembilan puluh sembilan";
+        String huruf = "Sembilan ratus sembilan";
         convert.konverter(satuan);
         System.out.println("");
         convert.konverter(huruf);
