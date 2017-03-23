@@ -16,7 +16,9 @@ public class konversi {
     
     public void konverter(int satuan) {
         String hasil = "";
-        if (satuan < 12) {
+        if (satuan == 0) {
+            hasil += "Nol";
+        } else if (satuan < 12) {
             hasil += huruf[satuan];
         } else if (satuan < 20) {
             hasil += huruf[satuan - 10] + " belas";
@@ -24,15 +26,15 @@ public class konversi {
             hasil += huruf[satuan / 10] + " puluh " + huruf[satuan % 10];
         } else if (satuan == 100) {
             hasil += "seratus";
-      //  } else if (satuan < 1000) {
-       //     hasil += huruf[satuan / 100] + " ratus " + huruf[satuan % 100];
+        } else if (satuan < 1000) {
+            hasil += huruf[satuan / 100] + " ratus " + huruf[satuan % 100];
         } else if (satuan == 1000) {
             hasil += "seribu";
             
         } else {
             hasil += "\nRange Melibihi Batas Wajar\n";
         }
-        System.out.println("Angka " + satuan + " terbilang : " +hasil);
+        System.out.print(satuan + " : " +hasil);
     }
     public void konverter(String kalimat) {
         String[] angka = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"};
@@ -59,11 +61,11 @@ public class konversi {
             }
         }
         int hsl = Integer.parseInt(hasil);
-        if (hsl > 100){
-            System.out.println("Terbilang " +kalimat+" :");
-            System.out.println("Range Melibihi Batas Wajar");
+        if (hsl > 1000){
+            System.out.print(kalimat+" \t: ");
+            System.out.print("Range Melibihi Batas Wajar");
         } else {
-            System.out.println("Terbilang " +kalimat+" : Angka " +hsl);
+            System.out.print(kalimat+" : " +hsl);
         }
     }
 }
